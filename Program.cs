@@ -1,2 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Написать программу, которая из имеющегося массива строк формирует массив из строк, длинна которых 
+// меньше либо равна 3 символа. Первоначальный массив можно ввести с клавиатуры, либо задать на старте
+// выполнения алгоритма. При решении обойтись исключительно массивами.
+
+using static System.Console;
+Clear();
+string[] arr = {"GB", "Geek", "Brains", "git", "5-4", "5 -4", "4к7н", ";)"};
+printArray(arr);
+
+
+void printArray(string[] array1)
+{
+    Write("[");
+    for (int i = 0; i < array1.Length; i++)
+    {   
+        Write(i!=array1.Length-1?$"{array1[i]}, ":$"{array1[i]}]");
+    }
+}
