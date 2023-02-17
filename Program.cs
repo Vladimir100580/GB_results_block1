@@ -15,7 +15,7 @@ printArray(arrayFormation(arr));
 string[] arrayFormation(string[] array2)
 {
     int n = 0; 
-    for (int i = 0; i < array2.Length; i++) {n += (array2[i].Length < 4?1:0);} // определяем количество строк, длинна которых меньше 4
+    for (int i = 0; i < array2.Length; i++) {n += (array2[i].Length<4?1:0);} // определяем количество строк, длинна которых меньше 4
     string[] arrf = new string[n];
     int m = 0;
     for (int i = 0; i < array2.Length; i++)
@@ -38,3 +38,6 @@ void printArray(string[] array1)
         Write(i!=array1.Length-1?$"'{array1[i]}', ":$"'{array1[i]}']");
     }
 }
+
+// P.S. В python всю красоту метода arrayFormation, скорее всего реализовал бы
+// одной строкой: arrf = [i for i in arr if len(i) < 4]
