@@ -6,6 +6,28 @@ using static System.Console;
 Clear();
 string[] arr = {"GB", "Geek", "Brains", "git", "5-4", "5 -4", "4к7н", ";)"};
 printArray(arr);
+Write(" -> ");
+printArray(arrayFormation(arr));
+
+
+
+
+string[] arrayFormation(string[] array2)
+{
+    int n = 0; 
+    for (int i = 0; i < array2.Length; i++) {n += (array2[i].Length < 4?1:0);} // определяем количество строк, длинна которых меньше 4
+    string[] arrf = new string[n];
+    n = 0;
+    for (int i = 0; i < array2.Length; i++)
+    {
+        if (array2[i].Length < 4)
+        {
+            arrf[n] = array2[i];
+            n++;
+        }
+    }
+    return arrf;
+}
 
 
 void printArray(string[] array1)
