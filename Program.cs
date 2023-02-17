@@ -35,8 +35,9 @@ void printArray(string[] array1)
     Write("[");
     for (int i = 0; i < array1.Length; i++)
     {   
-        Write(i!=array1.Length-1?$"'{array1[i]}', ":$"'{array1[i]}']");
+        Write(i!=array1.Length-1?$"'{array1[i]}', ":$"'{array1[i]}'");
     }
+    Write("]");
 }
 
 // P.S. В python всю красоту метода arrayFormation, скорее всего реализовал бы
